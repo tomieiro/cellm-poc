@@ -1,0 +1,2 @@
+/artefacts/lamp/weights.pt filter=lfs diff=lfs merge=lfs -text
+/artefacts/text8/text8 filter=lfs diff=lfs merge=lfs -text
