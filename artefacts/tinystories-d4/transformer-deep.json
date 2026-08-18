@@ -1,0 +1,135 @@
+{
+  "shape": {
+    "dimensions": 144,
+    "layers": 12,
+    "heads": 4
+  },
+  "parameters": {
+    "total": 3340512,
+    "by_component": {
+      "embedding": 294912,
+      "position": 36864,
+      "attention": 1005696,
+      "mlp": 2002752,
+      "norm": 288
+    },
+    "embedding_parameters": 331776,
+    "embedding_fraction": 0.09931890680231055,
+    "non_embedding_parameters": 3008736
+  },
+  "wall_clock_hours": 0.2544869050714705,
+  "history": [
+    {
+      "segment": "baseline_deep",
+      "objective": "language",
+      "step": 0,
+      "target_tokens": 0,
+      "train_loss": null,
+      "held_out": {
+        "nll": 7.6897983555163325,
+        "ppl": 2185.933736305087,
+        "bpc": 3.1506079030812932,
+        "tokens": 1027901,
+        "utf8_bytes": 3619482
+      },
+      "language_retention": null,
+      "wall_clock": 1787071962.557943
+    },
+    {
+      "segment": "baseline_deep",
+      "objective": "language",
+      "step": 1336,
+      "target_tokens": 2000680,
+      "train_loss": 3.902806520462036,
+      "held_out": {
+        "nll": 3.7018328572506314,
+        "ppl": 40.521506475302026,
+        "bpc": 1.516687865758312,
+        "tokens": 1027901,
+        "utf8_bytes": 3619482
+      },
+      "language_retention": null,
+      "wall_clock": 1787071996.3597739
+    },
+    {
+      "segment": "baseline_deep",
+      "objective": "language",
+      "step": 3335,
+      "target_tokens": 5000370,
+      "train_loss": 3.147141695022583,
+      "held_out": {
+        "nll": 2.9882108618490193,
+        "ppl": 19.850136066575374,
+        "bpc": 1.2243078845703663,
+        "tokens": 1027901,
+        "utf8_bytes": 3619482
+      },
+      "language_retention": null,
+      "wall_clock": 1787072046.6804647
+    },
+    {
+      "segment": "baseline_deep",
+      "objective": "language",
+      "step": 6686,
+      "target_tokens": 10000887,
+      "train_loss": 2.2958719730377197,
+      "held_out": {
+        "nll": 2.502615670803672,
+        "ppl": 12.214401065521992,
+        "bpc": 1.0253533768090228,
+        "tokens": 1027901,
+        "utf8_bytes": 3619482
+      },
+      "language_retention": null,
+      "wall_clock": 1787072131.6457381
+    },
+    {
+      "segment": "baseline_deep",
+      "objective": "language",
+      "step": 13389,
+      "target_tokens": 20000402,
+      "train_loss": 1.8687853813171387,
+      "held_out": {
+        "nll": 2.1633549880924665,
+        "ppl": 8.700278077601773,
+        "bpc": 0.8863539728275239,
+        "tokens": 1027901,
+        "utf8_bytes": 3619482
+      },
+      "language_retention": null,
+      "wall_clock": 1787072288.44604
+    },
+    {
+      "segment": "baseline_deep",
+      "objective": "language",
+      "step": 23412,
+      "target_tokens": 35000623,
+      "train_loss": 1.9332082271575928,
+      "held_out": {
+        "nll": 1.9827427151102024,
+        "ppl": 7.262635032425226,
+        "bpc": 0.8123548341838958,
+        "tokens": 1027901,
+        "utf8_bytes": 3619482
+      },
+      "language_retention": null,
+      "wall_clock": 1787072530.7670994
+    },
+    {
+      "segment": "baseline_deep",
+      "objective": "language",
+      "step": 33460,
+      "target_tokens": 50000075,
+      "train_loss": 1.981321930885315,
+      "held_out": {
+        "nll": 1.8921376601376632,
+        "ppl": 6.633533776294715,
+        "bpc": 0.7752327941695669,
+        "tokens": 1027901,
+        "utf8_bytes": 3619482
+      },
+      "language_retention": null,
+      "wall_clock": 1787072767.2294781
+    }
+  ]
+}
