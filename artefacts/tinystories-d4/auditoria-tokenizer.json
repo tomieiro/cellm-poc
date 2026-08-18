@@ -1,0 +1,468 @@
+{
+  "vocab_size": 2048,
+  "special_tokens": [
+    "<pad>",
+    "<unk>",
+    "<bos>",
+    "<user>",
+    "<assistant>",
+    "<eos>"
+  ],
+  "special_token_ids": {
+    "<pad>": 0,
+    "<unk>": 1,
+    "<bos>": 2,
+    "<user>": 3,
+    "<assistant>": 4,
+    "<eos>": 5
+  },
+  "words": [
+    {
+      "word": "Yes",
+      "token_ids": [
+        957
+      ],
+      "pieces": [
+        "Yes"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "yes",
+      "token_ids": [
+        94,
+        303
+      ],
+      "pieces": [
+        "y",
+        "es"
+      ],
+      "token_count": 2,
+      "single_token": false
+    },
+    {
+      "word": "No",
+      "token_ids": [
+        1174
+      ],
+      "pieces": [
+        "No"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "no",
+      "token_ids": [
+        83,
+        84
+      ],
+      "pieces": [
+        "n",
+        "o"
+      ],
+      "token_count": 2,
+      "single_token": false
+    },
+    {
+      "word": "Hello",
+      "token_ids": [
+        1390
+      ],
+      "pieces": [
+        "Hello"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "hello",
+      "token_ids": [
+        263,
+        306,
+        84
+      ],
+      "pieces": [
+        "he",
+        "ll",
+        "o"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "Hi",
+      "token_ids": [
+        1649
+      ],
+      "pieces": [
+        "Hi"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "hi",
+      "token_ids": [
+        77,
+        78
+      ],
+      "pieces": [
+        "h",
+        "i"
+      ],
+      "token_count": 2,
+      "single_token": false
+    },
+    {
+      "word": "The",
+      "token_ids": [
+        395
+      ],
+      "pieces": [
+        "The"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "the",
+      "token_ids": [
+        89,
+        263
+      ],
+      "pieces": [
+        "t",
+        "he"
+      ],
+      "token_count": 2,
+      "single_token": false
+    },
+    {
+      "word": "I",
+      "token_ids": [
+        46
+      ],
+      "pieces": [
+        "I"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "i",
+      "token_ids": [
+        78
+      ],
+      "pieces": [
+        "i"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "A",
+      "token_ids": [
+        38
+      ],
+      "pieces": [
+        "A"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "a",
+      "token_ids": [
+        70
+      ],
+      "pieces": [
+        "a"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "My",
+      "token_ids": [
+        50,
+        94
+      ],
+      "pieces": [
+        "M",
+        "y"
+      ],
+      "token_count": 2,
+      "single_token": false
+    },
+    {
+      "word": "my",
+      "token_ids": [
+        401
+      ],
+      "pieces": [
+        "my"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "Blue",
+      "token_ids": [
+        39,
+        81,
+        627
+      ],
+      "pieces": [
+        "B",
+        "l",
+        "ue"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "blue",
+      "token_ids": [
+        71,
+        81,
+        627
+      ],
+      "pieces": [
+        "b",
+        "l",
+        "ue"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "Green",
+      "token_ids": [
+        44,
+        271,
+        291
+      ],
+      "pieces": [
+        "G",
+        "re",
+        "en"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "green",
+      "token_ids": [
+        76,
+        271,
+        291
+      ],
+      "pieces": [
+        "g",
+        "re",
+        "en"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "White",
+      "token_ids": [
+        60,
+        77,
+        668
+      ],
+      "pieces": [
+        "W",
+        "h",
+        "ite"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "white",
+      "token_ids": [
+        92,
+        77,
+        668
+      ],
+      "pieces": [
+        "w",
+        "h",
+        "ite"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "CellLM",
+      "token_ids": [
+        40,
+        597,
+        49,
+        50
+      ],
+      "pieces": [
+        "C",
+        "ell",
+        "L",
+        "M"
+      ],
+      "token_count": 4,
+      "single_token": false
+    },
+    {
+      "word": "human",
+      "token_ids": [
+        77,
+        448,
+        297
+      ],
+      "pieces": [
+        "h",
+        "um",
+        "an"
+      ],
+      "token_count": 3,
+      "single_token": false
+    },
+    {
+      "word": "computer",
+      "token_ids": [
+        2036,
+        85,
+        330,
+        280
+      ],
+      "pieces": [
+        "com",
+        "p",
+        "ut",
+        "er"
+      ],
+      "token_count": 4,
+      "single_token": false
+    },
+    {
+      "word": "Sure",
+      "token_ids": [
+        2022
+      ],
+      "pieces": [
+        "Sure"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "sure",
+      "token_ids": [
+        88,
+        488
+      ],
+      "pieces": [
+        "s",
+        "ure"
+      ],
+      "token_count": 2,
+      "single_token": false
+    },
+    {
+      "word": "Of",
+      "token_ids": [
+        52,
+        75
+      ],
+      "pieces": [
+        "O",
+        "f"
+      ],
+      "token_count": 2,
+      "single_token": false
+    },
+    {
+      "word": "It",
+      "token_ids": [
+        1015
+      ],
+      "pieces": [
+        "It"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "That",
+      "token_ids": [
+        1131
+      ],
+      "pieces": [
+        "That"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "You",
+      "token_ids": [
+        449
+      ],
+      "pieces": [
+        "You"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "We",
+      "token_ids": [
+        1274
+      ],
+      "pieces": [
+        "We"
+      ],
+      "token_count": 1,
+      "single_token": true
+    },
+    {
+      "word": "There",
+      "token_ids": [
+        395,
+        271
+      ],
+      "pieces": [
+        "The",
+        "re"
+      ],
+      "token_count": 2,
+      "single_token": false
+    }
+  ],
+  "critical_words": [
+    "Yes",
+    "No",
+    "Hello",
+    "The",
+    "I",
+    "A"
+  ],
+  "critical_failures": [],
+  "fragmented_color_words": [
+    "Blue",
+    "Green",
+    "White"
+  ],
+  "single_token_colors": [
+    "Black",
+    "Yellow",
+    "Red",
+    "Orange",
+    "Purple",
+    "Brown"
+  ],
+  "single_token_rate": 0.45454545454545453,
+  "passed": true
+}
