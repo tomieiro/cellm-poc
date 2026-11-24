@@ -18,6 +18,7 @@ cpu = ["torch==2.13.0"]
 [project.scripts]
 cellm-continuity = "cellm_poc.experiment:main"
 cellm-benchmark = "cellm_poc.benchmark:main"
+cellm-history = "cellm_poc.history:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
