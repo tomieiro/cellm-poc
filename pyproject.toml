@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cellm-poc"
+version = "0.1.0"
+description = "Pesquisa experimental em modelos de linguagem com dinâmica celular"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+dependencies = ["torch==2.13.0", "tokenizers==0.23.1", "numpy==2.4.3", "celnn[torch]==1.0.0"]
+
+[project.optional-dependencies]
+cuda = ["torch==2.13.0"]
+cpu = ["torch==2.13.0"]
+
+[project.scripts]
+cellm-continuity = "cellm_poc.experiment:main"
+cellm-benchmark = "cellm_poc.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv]
+conflicts = [[{ extra = "cuda" }, { extra = "cpu" }]]
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cuda", extra = "cuda" },
+  { index = "pytorch-cpu", extra = "cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true

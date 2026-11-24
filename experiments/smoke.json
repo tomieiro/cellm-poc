@@ -1,0 +1,25 @@
+{
+  "smoke": true,
+  "context": 128,
+  "shape": {
+    "block": 16,
+    "width": 16,
+    "steps": 2,
+    "radius": 2,
+    "lamp_radius": 2,
+    "lamp_width": 4,
+    "gradient_horizon": 4
+  },
+  "overlap": 8,
+  "budgets": [256, 512],
+  "seeds": [42, 1337],
+  "batch_size": 2,
+  "vocab_size": 384,
+  "learning_rate": 0.0003,
+  "boundary_windows": 4,
+  "evaluation_seed": 180017,
+  "recall_distances": [32, 64],
+  "recall_trials": 2,
+  "generation_tokens": 8,
+  "prompts": ["The garden has"]
+}

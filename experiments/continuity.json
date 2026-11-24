@@ -1,0 +1,25 @@
+{
+  "smoke": false,
+  "context": 2048,
+  "shape": {
+    "block": 64,
+    "width": 128,
+    "steps": 16,
+    "radius": 4,
+    "lamp_radius": 2,
+    "lamp_width": 32,
+    "gradient_horizon": 4
+  },
+  "overlap": 32,
+  "budgets": [5000000, 20000000, 50000000, 100000000],
+  "seeds": [42, 1337, 2024],
+  "batch_size": 4,
+  "vocab_size": 2048,
+  "learning_rate": 0.0003,
+  "boundary_windows": 128,
+  "evaluation_seed": 180017,
+  "recall_distances": [32, 64, 128, 256, 512, 1024],
+  "recall_trials": 24,
+  "generation_tokens": 64,
+  "prompts": ["Once upon a time", "The girl opened the door", "The code is blue. What is the code? The code is"]
+}
