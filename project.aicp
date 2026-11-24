@@ -1,0 +1,19 @@
+@aicp v=semver:0.3.0 id=cellm-poc kind=research summary="Prova de conceito de modelagem de texto com dinâmica celular e protocolo experimental de continuidade entre blocos"
+@stack lang=set[enum]:[python,bash] runtime=set[enum]:[pytorch,celnn] package=list[path]:[pyproject.toml] lock=list[path]:[uv.lock]
+@agent read=list[atom]:[@aicp,@stack,@mod,@surface,@resolver,@inv] verify=bool:true update_on_arch_change=bool:true mode=guided
+@avoid paths=list[glob]:[.git/**,.venv/**,runs/**,data/**,dist/**,build/**,historical/**,artefacts/**/*.pt,artefacts/text8/text8]
+@mod continuity kind=core owns=set[id]:[cellular-state,training,recall] entry=list[path]:[src/cellm_poc/model.py,src/cellm_poc/protocol.py,src/cellm_poc/experiment.py,experiments/continuity.json] test=list[path]:[tests/test_protocol.py]
+@mod benchmarking kind=cli owns=set[id]:[inference-measurement] entry=list[path]:[src/cellm_poc/benchmark.py,Makefile]
+@mod historical kind=cli owns=set[id]:[archived-protocols,archived-results] entry=list[path]:[src/cellm_poc/history.py,experiments/replay_d4.py,experiments/replay_lamp.py,historical/README.md,artefacts/README.md,Makefile] test=list[path]:[tests/test_history.py]
+@surface run-continuity owner=continuity kind=cli visibility=public evidence=list[path]:[Makefile,src/cellm_poc/experiment.py]
+@surface replay-history owner=historical kind=cli visibility=public evidence=list[path]:[Makefile,README.md]
+@resolver edit-continuity target=mod.continuity intent=edit go=list[path]:[experiments/continuity.json,src/cellm_poc/experiment.py,src/cellm_poc/protocol.py,src/cellm_poc/model.py,tests/test_protocol.py] verify=list[string]:["make test","make smoke SMOKE_OUT=runs/verify-continuity"]
+@resolver replay-historical target=mod.historical intent=run go=list[path]:[README.md,Makefile,src/cellm_poc/history.py,artefacts/README.md] verify=list[string]:["make test","make history","make d4-check","make verify-artefacts"]
+@resolver measure-inference target=mod.benchmarking intent=run go=list[path]:[README.md,Makefile,src/cellm_poc/benchmark.py] verify=list[string]:["make benchmark CHECKPOINT=runs/smoke/42-carry.pt LENGTH=128"]
+@contract dataset kind=file source=list[path]:[src/cellm_poc/protocol.py,README.md] summary="Três JSONL separados por documento com campo text; BPE ajustado no treino"
+@inv paired-training scope=set[id]:[continuity] rule="Mesmas sementes, pesos iniciais e ordem dos lotes para carry e reset; mesmas contagens de alvos e dados para todos os braços." evidence=list[path]:[src/cellm_poc/experiment.py,tests/test_protocol.py]
+@inv causal-field scope=set[id]:[continuity] rule="Templates e LAMP são causais; carry mantém o campo anterior inteiro; reset reinicializa o campo a cada bloco." evidence=list[path]:[src/cellm_poc/model.py,tests/test_protocol.py]
+@inv overlap-pairing scope=set[id]:[continuity] rule="Reset e overlap pontuam os mesmos alvos e a janela com overlap começa com campo zerado." evidence=list[path]:[src/cellm_poc/protocol.py,tests/test_protocol.py]
+@risk archive-inputs level=medium scope=set[id]:[historical] mitigation="Artefatos disponíveis e snapshots residem no checkout; README registra os insumos originais do D4 ainda indisponíveis."
+@inv celnn-dynamics scope=set[id]:[continuity] rule="A atualização do campo e seus gradientes passam por DifferentiableCellularNetwork da biblioteca celnn; o CelLM fornece LAMP como drive adicional." evidence=list[path]:[src/cellm_poc/model.py,tests/test_protocol.py,pyproject.toml]
+@artifact experiment-record scope=set[id]:[historical] evidence=list[path]:[artefacts/README.md,artefacts/SHA256SUMS]

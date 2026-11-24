@@ -1,0 +1,6 @@
+include Makefile
+include project.aicp
+include uv.lock
+recursive-include experiments *.json *.py
+recursive-include historical *.py LICENSE README.md
+recursive-include artefacts *.md *.txt *.json *.jsonl *.ipynb *.npz SHA256SUMS
